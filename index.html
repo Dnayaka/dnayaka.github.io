@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="script.js"></script>
+  <link rel="icon" href="islam.jpg" type="image/icon type">
+  <title>DNayaka</title>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">DNayaka</a>
+    <ul>
+      <li><a href="" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://wa.me/628985540051?text=Just%20A%20Beginner">Contact</a></li>
+      <li><a href="work.html">Work</a></li>
+    </ul>
+  </header>
+  <div id="mobile-warning">
+    <script>
+      alert("Use Dekstop View For Better Experience")
+    </script>
+  </div>
+  <section>
+    <img src="stars.png" id="stars">
+    <img src="moon.png" id="moon">
+    <img src="mountains_behind.png" id="mountains_behind">
+    <h2 id="text">Dashboard</h2>
+    <a href="#sec" id="btn">Explore</a>
+    <img src="mountains_front.png" id="mountains_front">
+  </section>
+  <div class="sec" id="sec">
+    <h2>DNayaka Dashboard</h2>
+    <p> Creating a web dashboard involves designing a user interface that provides a visually intuitive and comprehensive overview of key data and metrics. A well-crafted web dashboard seamlessly integrates data visualization elements, such as charts, graphs, and tables, to present information in a clear and digestible format. The dashboard should prioritize user experience, allowing for easy navigation and interaction with various features. Customization options, real-time data updates, and responsive design are crucial considerations to ensure adaptability across different devices. Whether tracking business analytics, monitoring project progress, or managing resources, a thoughtfully designed web dashboard enhances decision-making by offering a centralized and accessible platform for users to gather insights and take timely actions. <br></br> A web dashboard serves as a centralized platform, providing users with a dynamic and visually compelling snapshot of crucial information. Through effective data visualization techniques, such as interactive charts and graphs, a web dashboard transforms complex datasets into actionable insights. The design prioritizes user-friendly navigation, ensuring seamless access to key metrics and features. Customization capabilities empower users to tailor their dashboard experience, while real-time updates maintain the relevance and accuracy of displayed information. Whether used for business intelligence, project management, or monitoring performance metrics, a well-crafted web dashboard becomes a powerful tool, facilitating informed decision-making and enhancing overall operational efficiency.</p>
+  </div>
+  <script>
+
+    // Ambil referensi ke elemen pop-up
+    var popupContainer = document.getElementById("popup-container");
+
+    // Fungsi untuk menampilkan pop-up
+    function openPopup() {
+        popupContainer.style.display = "block";
+    }
+
+    // Fungsi untuk menyembunyikan pop-up
+      function closePopup() {
+        popupContainer.style.display = "none";
+    }
+
+
+
+    // Tampilkan pop-up secara otomatis (contohnya saat halaman dimuat)
+    // openPopup();
+
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let mountains_front = document.getElementById('mountains_front');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let header = document.querySelector('header')
+
+    window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 + 'px';
+      moon.style.top = value * 1.05 + 'px';
+      mountains_behind.style.top = value * 0.5 + 'px';
+      mountains_front.style.top = value * 0 + 'px';
+      text.style.marginRight = value * 4 + 'px';
+      text.style.marginTop = value * 1.5 + 'px';
+      btn.style.marginTop = value * 1.5 + 'px';
+      header.style.top = value * 0.5 + 'px';
+    })
+  </script>
+</body>
+</html>
