@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="icon" href="islam.jpg" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <form id="task-form">
+            <input type="text" id="task" placeholder="Add Task">
+            <input type="datetime-local" id="deadline">
+            <button type="submit">Add Task</button>
+        </form>
+        <div id="task-list"></div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close">&times;</span>
+            <h2>Task Deadline Over!</h2>
+            <p id="popup-task-name"></p>
+            <p id="popup-deadline"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
