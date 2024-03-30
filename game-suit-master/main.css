@@ -1,0 +1,56 @@
+body{
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/47/1a/08/471a08fc76dc51e61d8cc160a70f3448.jpg");
+  background-repeat: no-repeat;
+}
+#hilang{
+  display: none;
+}
+
+.tengah{
+  text-align: center;
+  margin-top: 133px;
+}
+.tombol {
+  height: 70px;
+  width: 75px;
+  border-radius: 50%;
+  border: 1px;
+}
+
+.tombol .kuning{
+  background-image: url("http://geology.com/articles/difficult-rocks/difficult-rock-identification.jpg");
+}
+
+.red{
+  background-color: red;
+}
+
+.blue{
+  background-color: blue;
+}
+
+h1{
+  background-color: white;
+  padding: 90px, 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.img6 {
+    box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    transform:  rotate(+2deg);
+    -o-transform: rotate(+2deg);
+    -webkit-transform:  rotate(+2deg);
+    -moz-transform: rotate(+2deg);
+}
+.img6:hover {
+    box-shadow:  0 3px 6px rgba(0,0,0,.5);
+    transform:  rotate(-1deg);
+    -webkit-transform:  rotate(-1deg);
+    -o-transform:  rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+}
+
+#paper{background: red;}
+#scissors{ background: blue;}
+#rock{background: yellow}
