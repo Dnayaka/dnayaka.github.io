@@ -1,46 +1,23 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en" data-bs-theme="light">
   <head><script src="color-modes.js"></script>
 
     <meta charset="utf-8">
-    <meta name="author" content="Dnayaka Website">
-    <meta name="generator" content="Dnayaka Website V.0.0.1">
-    <title>Dnayaka Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
     <link rel="icon" href="th.jpg" type="image/icon type">
+    <title>Dnayaka</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-static/">
 
     
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script>
-      function ShowNotification() {
-          // Check if browser supports Notifications
-          if (!("Notification" in window)) {
-              alert("Your Browser not supported notification!");
-          } else if (Notification.permission === "granted") {
-              // If permission granted, show notification
-              var notification = new Notification("Selamat Datang", {
-                  icon: "th.jpg", // Change with your notification icon path
-                  body: "Selamat Datang di Website Dnayaka."
-              });
-          } else if (Notification.permission !== "denied") {
-              // If permission not asked yet, ask for notification permission
-              Notification.requestPermission().then(function(permission) {
-                  if (permission === "granted") {
-                      var notification = new Notification("Selamat Datang", {
-                          icon: "th.jpg", // Change with your notification icon path
-                          body: "Selamat Datang di Website Dnayaka."
-                      });
-                  }
-              });
-          }
-      }
-    </script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    </script>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -110,24 +87,17 @@
         --bs-btn-active-bg: #5a23c8;
         --bs-btn-active-border-color: #5a23c8;
       }
-
       .bd-mode-toggle {
         z-index: 1500;
-      }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
       }
     </style>
 
     
     <!-- Custom styles for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
+    <link href="navbar-static.css" rel="stylesheet">
   </head>
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
       </symbol>
@@ -143,147 +113,88 @@
       </symbol>
     </svg>
 
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
-    </div>
+    
 
     
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-    <circle cx="12" cy="12" r="10"/>
-    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
-  </symbol>
-  <symbol id="cart" viewBox="0 0 16 16">
-    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-  </symbol>
-  <symbol id="chevron-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-  </symbol>
-</svg>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">Dnayaka Work</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <form method="get" action="https://wa.me/+6281548828880">
+          <button class="button">
+            Whatsapp
+          </button>
+        </form>
+        <form method="get" action="https://www.instagram.com/dnayakastore/">
+          <button class="button">
+            Instagram
+          </button>
+        </form>
+      </ul>
 
-<div class="container">
-  <header class="border-bottom lh-1 py-3">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 text-center">
-        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="">Dnayaka Website</a>
-        <script>ShowNotification()</script>
+      <div class="search">
+        <div class="search-box">
+          <div class="search-field">
+            <input placeholder="Search..." class="input" type="text">
+            <div class="search-box-icon">
+              <form>
+                <button class="btn-icon-content">
+              </form method="get" action="">
+              <i class="search-icon">
+                <svg xmlns="://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" fill="#fff"></path></svg>
+              </i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </header>
 
-  <div class="nav-scroller py-1 mb-3 border-bottom">
-    <nav class="nav nav-underline justify-content-between">
-      <a class="nav-item nav-link link-body-emphasis active" href="">Home</a>
-      <a class="nav-item nav-link link-body-emphasis" href="work">Projek</a>
-      <a class="nav-item nav-link link-body-emphasis" href="">Pembelajaran (Belum Tersedia)</a>
-      <a class="nav-item nav-link link-body-emphasis" href="https://github.com/Dnayaka/bored">Source Code</a>
-      <a class="nav-item nav-link link-body-emphasis" href="https://github.com/Dnayaka">GitHub</a>
-      <a class="nav-item nav-link link-body-emphasis" href="https://wa.me/628985540051">Whatsapp</a>
-      <a class="nav-item nav-link link-body-emphasis" href="https://www.instagram.com/dnayakastore/">Instagram</a>
-      <a class="nav-item nav-link link-body-emphasis" href="https://chat.whatsapp.com/BOXgNGc30f0LX83T6QaE7u">Grup Wa</a>
-    </nav>
+    </div>
   </div>
-</div>
+</nav>
 
 <main class="container">
-  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
-    <div class="col-lg-6 px-0">
-      <h1 class="display-4 fst-italic">Dnayaka</h1>
-      <p class="lead my-3">“Hidup harus terus berlanjut,tidak peduli seberapa menyakitkan atau membahagiakan, biar waktu yg menjadi obat”</p>
-    </div>
+  <div class="bg-body-tertiary p-5 rounded">
+    <h1>1. Maze Games - For pc</h1>
+    <p class="lead"></p>
+    <form method="get" action="Maze-Game-main">
+      <button type="submit" class="button">Play Now →</button>
+    </form>
+    <h1>2. Task Manager</h1>
+    <p class="lead"></p>
+    <form method="get" action="Tasks">
+      <button type="submit" class="button">Play Now →</button>
+    </form>
+    <h1>3. Chess</h1>
+    <p class="lead"></p>
+    <form method="get" action="CHESS">
+      <button type="submit" class="button">Play Now →</button>
+    </form>
+    <h1>4. Cut The Box</h1>
+    <p class="lead"></p>
+    <form method="get" action="CutTheBox">
+      <button type="submit" class="button">Play Now →</button>
+    </form>
+    <h1>5. Calculator</h1>
+    <p class="lead"></p>
+    <form method="get" action="Calculator">
+      <button type="submit" class="button">Play Now →</button>
+    </form>
+    <h1>6. Customize Chrome</h1>
+    <p class="lead"></p>
+    <form method="get" action="Chrome">
+      <button type="submit" class="button">Play Now →</button>
+    </form>
   </div>
-
-  <div class="row mb-2">
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary-emphasis">Home</strong>
-          <h3 class="mb-0">Tahap Pengembagan</h3>
-          <div class="mb-1 text-body-secondary">Maret 30</div>
-          <p class="card-text mb-auto">Sabar mas/mba Website Dnayaka Masih dalam tahap pengembangan</p>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row g-5">
-    <div class="col-md-8">
-      <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        From Dnayaka
-      </h3>
-
-      <article class="blog-post">
-        <h2 class="display-5 link-body-emphasis mb-1">Dnayaka Projek</h2>
-        <p class="blog-post-meta">30 Maret by <a href="">Dnayaka</a></p>
-
-        <p>Website ini di buat dengan template Bootstrap, Kalian bisa search di google atau chrome kalian.</p>
-        <hr>
-        <p>Website ini juga dibuat oleh satu orang saja yaitu sang developer, Dnayaka. Di website ini kalian bisa sedikit belajar tentang html, css, dan js yan pernah saya pelajari.</p>
-        <h2>Blockquotes</h2>
-        <p>Sedikit quotes dari Dnayaka</p>
-        <blockquote class="blockquote">
-          <cite>"Kegagalan adalah kemenangan yang tertunda, jangan menyerah karena dengan menyerah berarti tidak ada kemenangan."</cite>
-        </blockquote>
-        <h3>Beberapa Projek Yang saya akan kembangkan</h3>
-        <ul>
-          <li>Akan di buatkan list <strong>Pembelajaran</strong></li>
-          <li>Akan di buatkan button yang akan di tambahkan di</li>
-          <li>Third list item to close it out</li>
-        </ul>
-      </article>
-    </div>  
-    <div class="col-md-4">
-      <div class="position-sticky" style="top: 2rem;">
-        <div class="p-4 mb-3 bg-body-tertiary rounded">
-          <h4 class="fst-italic">Tentang Dnayaka</h4>
-          <p class="mb-0">Assalamualaikum wr wb. Nama Saya Dnayaka, sekarang umurku baru menginjak 12 tahun, Saya lahir tahun 2011, Saya bersekolah di SMPN 2 Purwokerto. Saya buat Website ini hanya kegabutan Semata, Jika ada bug di website ini, Segera hubungi saya, Saya akan sangat senang.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </main>
 
-<footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-  <p>Website ini di buat oleh Dnayaka, Karena gw gabut. Gw atau Dnayaka di umur 13 tahun aja bisa buat web masa lu nggak CHUAKZZ.</p>
-  <p class="mb-0">
-    <a href="">Back to top</a>
-  </p>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
 </html>
