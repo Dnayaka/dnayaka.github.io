@@ -1,289 +1,484 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-  <head><script src="color-modes.js"></script>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <meta charset="utf-8">
-    <meta name="author" content="Dnayaka Website">
-    <meta name="generator" content="Dnayaka Website V.0.0.1">
-    <title>Dnayaka Website</title>
-    <link rel="icon" href="th.jpg" type="image/icon type">
+    <meta name="keywords" content="dycoders">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
+    <meta name="description" content="Dnayaka Websites">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dnayaka Web">
+    <meta property="og:description" content="Web frontend">
+    <meta property="og:image" content="img/url.jpg">
+    <meta name="twitter:image" content="assets/img/url.jpg">
+   <meta property="og:image" content="images/url.jpg">
+  <title> Naxyz Websites</title>
+  <meta content="dycoders" name="description">
+  <meta content="xyydycoders" name="keywords">
+  
 
-    
+ 
+  <link href="th.jpg" rel="icon">
+  <link href="th.jpg" rel="apple-touch-icon">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+ 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script>
-      function ShowNotification() {
-          // Check if browser supports Notifications
-          if (!("Notification" in window)) {
-              alert("Your Browser not supported notification!");
-          } else if (Notification.permission === "granted") {
-              // If permission granted, show notification
-              var notification = new Notification("Selamat Datang", {
-                  icon: "th.jpg", // Change with your notification icon path
-                  body: "Selamat Datang di Website Dnayaka."
-              });
-          } else if (Notification.permission !== "denied") {
-              // If permission not asked yet, ask for notification permission
-              Notification.requestPermission().then(function(permission) {
-                  if (permission === "granted") {
-                      var notification = new Notification("Selamat Datang", {
-                          icon: "th.jpg", // Change with your notification icon path
-                          body: "Selamat Datang di Website Dnayaka."
-                      });
-                  }
-              });
-          }
-      }
-    </script>
+ 
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/boxicons.min.css" rel="stylesheet">
+  <link href="css/glightbox.min.css" rel="stylesheet">
+  <link href="css/remixicon.css" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
 
-    </script>
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+  <link href="css/style.css" rel="stylesheet">
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+</head>
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+<body>
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+      <h1><a href="https://www.instagram.com/xyy_dy_coders?igsh=MTM0aXNnaDR6d2tyeA==">Hi, I'm Naxyz</a></h1>
+      <br>
+<h1>
+  <div class="typingtext">i'm FRONTEND DEVELOPER</div>
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
-  </head>
-  <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-      </symbol>
-    </svg>
-
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-
-    
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-    <circle cx="12" cy="12" r="10"/>
-    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
-  </symbol>
-  <symbol id="cart" viewBox="0 0 16 16">
-    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-  </symbol>
-  <symbol id="chevron-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-  </symbol>
-</svg>
-
-<div class="container">
-  <header class="border-bottom lh-1 py-3">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 text-center">
-        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="">Dnayaka Website</a>
-        <script>ShowNotification()</script>
-      </div>
-    </div>
-  </header>
-
-  <div class="nav-scroller py-1 mb-3 border-bottom">
-    <nav class="nav nav-underline justify-content-between">
-      <a class="nav-item nav-link link-body-emphasis active" href="">Home</a>
-      <a class="nav-item nav-link link-body-emphasis" href="/work">Projek</a>
-      <a class="nav-item nav-link link-body-emphasis" href="">Pembelajaran (Belum Tersedia)</a>
-      <a class="nav-item nav-link link-body-emphasis" href="https://github.com/Dnayaka/bored">Source Code</a>
-      <a class="nav-item nav-link link-body-emphasis" href="https://github.com/Dnayaka">GitHub</a>
-      <a class="nav-item nav-link link-body-emphasis" href="https://wa.me/628985540051">Whatsapp</a>
-      <a class="nav-item nav-link link-body-emphasis" href="https://www.instagram.com/dnayakastore/">Instagram</a>
-      <a class="nav-item nav-link link-body-emphasis" href="https://chat.whatsapp.com/BOXgNGc30f0LX83T6QaE7u">Grup Wa</a>
-    </nav>
-  </div>
-</div>
-
-<main class="container">
-  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
-    <div class="col-lg-6 px-0">
-      <h1 class="display-4 fst-italic">Dnayaka</h1>
-      <p class="lead my-3">“Hidup harus terus berlanjut,tidak peduli seberapa menyakitkan atau membahagiakan, biar waktu yg menjadi obat”</p>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary-emphasis">Home</strong>
-          <h3 class="mb-0">Tahap Pengembagan</h3>
-          <div class="mb-1 text-body-secondary">Maret 30</div>
-          <p class="card-text mb-auto">Sabar mas/mba Website Dnayaka Masih dalam tahap pengembangan</p>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row g-5">
-    <div class="col-md-8">
-      <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        From Dnayaka
-      </h3>
-
-      <article class="blog-post">
-        <h2 class="display-5 link-body-emphasis mb-1">Dnayaka Projek</h2>
-        <p class="blog-post-meta">30 Maret by <a href="">Dnayaka</a></p>
-
-        <p>Website ini di buat dengan template Bootstrap, Kalian bisa search di google atau chrome kalian.</p>
-        <hr>
-        <p>Website ini juga dibuat oleh satu orang saja yaitu sang developer, Dnayaka. Di website ini kalian bisa sedikit belajar tentang html, css, dan js yan pernah saya pelajari.</p>
-        <h2>Blockquotes</h2>
-        <p>Sedikit quotes dari Dnayaka</p>
-        <blockquote class="blockquote">
-          <cite>"Kegagalan adalah kemenangan yang tertunda, jangan menyerah karena dengan menyerah berarti tidak ada kemenangan."</cite>
-        </blockquote>
-        <h3>Beberapa Projek Yang saya akan kembangkan</h3>
+      <nav id="navbar" class="navbar">
         <ul>
-          <li>Akan di buatkan list <strong>Pembelajaran</strong></li>
-          <li>Akan di buatkan button yang akan di tambahkan di</li>
-          <li>Third list item to close it out</li>
+          <li><a class="nav-link active" href="#header">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#resume">Resume</a></li>
+          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li><a onclick="playPause()" id="toggleButton" class="terkadang">play music</a>
+        <audio id="lagu">
+            <source src="media/m_3011snzqb0.mp3" type="audio/mpeg">
+        </audio>
+    </li>
         </ul>
-      </article>
-    </div>  
-    <div class="col-md-4">
-      <div class="position-sticky" style="top: 2rem;">
-        <div class="p-4 mb-3 bg-body-tertiary rounded">
-          <h4 class="fst-italic">Tentang Dnayaka</h4>
-          <p class="mb-0">Assalamualaikum wr wb. Nama Saya Dnayaka, sekarang umurku baru menginjak 12 tahun, Saya lahir tahun 2011, Saya bersekolah di SMPN 2 Purwokerto. Saya buat Website ini hanya kegabutan Semata, Jika ada bug di website ini, Segera hubungi saya, Saya akan sangat senang.</p>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="social-links">
+        <a href="" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/dnayakastore/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/628985540051" class="linkedin"><i class="bi bi-whatsapp"></i></a>
+      </div>
+
+
+  </h1></div></header><!-- End Header -->
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+
+      <div class="section-title">
+        <h2>About</h2>
+        <p>Learn more about me</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="images/me.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>FRONTEND DEVELOPER &amp; UI/UX </h3>
+          <p class="fst-italic">
+            
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Name</strong> <span>Naxyz</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Jawa tengah Purwokerto , Indonesia</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>12</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Newbie</span></li>
+                
+              </ul>
+            </div>
+          </div>
+          <p>
+            Haii saya Naxyzz, saya adalah frontend dan juga backend developer. saya belajar dengan otodidak di youtube mau di google, tidak ada guru atau pun pembimbing walaupun begitu saya tetap terus belajar coding untuk mencapai full stack developer, untuk melihat jejak perjalanan saya anda bisa klick resume. 
+          </p>
+       
+        </div>
+      </div>
+
+    </div><!-- End About Me -->
+
+    <!-- ======= Counts ======= -->
+    <div class="counts container">
+
+      <div class="row">
+
+  
+        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+          <div class="count-box">
+            <i class="bi bi-journal-richtext"></i>
+            <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Projects</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="bi bi-award"></i>
+            <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Awards</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- End Counts -->
+
+    <!-- ======= Skills  ======= -->
+    <div class="skills container">
+
+      <div class="section-title">
+        <h2>Skills</h2>
+      </div>
+
+      <div class="row skills-content">
+
+        <div class="col-lg-6">
+
+          <div class="progress">
+            <span class="skill">HTML <i class="val">100%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">CSS <i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">JavaScript <i class="val">20%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <div class="progress">
+            <span class="skill">PHP <i class="val">10%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              
+            </div>
+          </div>
+
+            </div>
+            
+          </div>
+
+        </div>
+
+      
+
+   
+
+    <!-- ======= Interests ======= -->
+
+
+  </section><!-- End About Section -->
+
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Resume</h2>
+        <p>Check My Resume</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">HALLO SAYA NAXYZ</h3>
+          <div class="resume-item pb-0">
+            <h4>2020/2021</h4>
+            <p><em>Saya memulai Dari 2020 memulai belajar dengan membuat app calculator dengan js, itupun gagal, dan hanya memiliki hp pas pasan bahasa pemerograman pertama saya adalah python. Dan mulai tertarik untuk membikin website karna iseng lalu melihat teman-teman saya yang sudah mulai pada ahli membikin website walaupun saya tahu saya beda jauh skill,dan pembalajaran nya mereka sudah pada smk sampai ada yang sudah kuliah dan saya masih kelas 5 SD, Tetapi saya tidak menyerah dan saya terus mempelajari hal tersebut.</em></p>
+            <p>
+          </p></div>
+
+          <h3 class="resume-title">PEMBELAJARAN DASAR HTML DAN CSS</h3>
+          <div class="resume-item">
+            <h4>Mempelajari Elemnt-Elemnt html dan css</h4>
+            <h5>2021</h5>
+            <p><em>Kemajuan teknologi menjadi semangat saya belajar coding, Karna lebih mudah untuk belajar Saya pertama kali belajar dari youtube mau dari Channel siapapun saya coba belajar elemnt-elemnt html dan css </em></p>
+            <p></p>
+          </div>
+          <div class="resume-item">
+            <h4>PEMBELAJARAN JAVASCRIPT</h4>
+            <h5>2022-2023</h5>
+            <p><em>Di sini saya memiliki Grup wa yang bernama Bahasa pemrograman dan sebagainya. Dia situ belajar dan juga Kasih materi-materi ke mereka tentang dasar-dasar html dan javascript.</em></p>
+           
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h3 class="resume-title">PEMBELAJARAN MEMBIKIN WEB DAN PROJEK</h3>
+          <div class="resume-item">
+            <h4>WEB INI</h4>
+            <h5>2024</h5>
+          
+            <p>
+            </p><ul>
+              <li>Belajar Bahasa program HTML saya temani oleh AI (Artificial Intelligence)</li>
+              <li>Ada nya ai tidak membikin saya patah semangat untuk belajar malah saya berusaha menggunakan ai dengan baik</li>
+              <li> <a href="https://dnayaka.github.io"> https://dnayaka.github.io </a>Dan ini web page pertama saya.</li>
+              <li>Ini link projek saya <a href="work.html">work.html</a></li>
+            </ul>
+            <p></p>
+          </div>
+    
+    </div>
+  </div></div></section><!-- End Resume Section -->
+
+  <!-- ======= Services Section ======= -->
+
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>Coders</p>
+      </div>
+
+
+
+      <div class="row portfolio-container">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="images/portfolio-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>ddos</h4>
+              <p>ddos website</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="ddos menggunakan javasciprt"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="images/portfolio-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>sqlmap</h4>
+              <p>sqlmap</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="sqlmap"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="images/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>mencoba tools osint</h4>
+              <p>osint pada kali linux</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="osint and sqlmap"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="images/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>shell</h4>
+              <p>web shell</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="web shell"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="images/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>tools evilimiter</h4>
+              <p>evilimiter</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="evilimiter"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="images/portfolio-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>akses web admin</h4>
+              <p>hacked by dycoders</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="repo menara siswa"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="images/portfolio-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>sc ddos</h4>
+              <p>sc ddos python</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="sc ddos bahasa program python"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="images/portfolio-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>ddos layer7</h4>
+              <p>sc ddos layer7 python</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="sc ddos by hasoki"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="images/portfolio-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>run bot replit</h4>
+              <p>bot wa nodejs</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="bot wa bahasa program javascript"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Contact Me</p>
+      </div>
+
+      <div class="row mt-2">
+
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map"></i>
+            <h3>My Address</h3>
+            <p>Purwokerto-jawatengah</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>Social Profiles</h3>
+            <div class="social-links">
+              <a href="https://www.instagram.com/dnayakastore" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://github.com/Dnayaka" class="linkedin"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>Email Me</h3>
+            <p>nayakanata097@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-phone-call"></i>
+            <h3>My number</h3>
+            <p>+628985540051</p>
+          </div>
         </div>
       </div>
     </div>
+  </section><!-- End Contact Section -->
+
+  <div class="credits">
+    Designed by <a href="">Naxyzz</a>
   </div>
 
-</main>
+  <!-- Vendor JS Files -->
+  <script src="js/purecounter_vanilla.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/glightbox.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/noframework.waypoints.js"></script>
+  <script src="js/validate.js"></script>
 
-<footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-  <p>Website ini di buat oleh Dnayaka, Karena gw gabut. Gw atau Dnayaka di umur 13 tahun aja bisa buat web masa lu nggak CHUAKZZ.</p>
-  <p class="mb-0">
-    <a href="">Back to top</a>
-  </p>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+<script> src="assets/js/textanimation.js"</script>
 
-    </body>
-</html>
+<script>
+function playPause() {
+    var audio = document.getElementById("lagu");
+    var button = document.getElementById("toggleButton");
+    if (audio.paused) {
+        audio.play();
+        button.textContent = "stop music";
+    } else {
+        audio.pause();
+        button.textContent = "play music";
+    }
+}
+</script>
+
+
+</body></html>
