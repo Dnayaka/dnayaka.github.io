@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>𝙉𝙖𝙭𝙮𝙯𝙯</title>
+    <link rel="icon" href="https://dnayaka.github.io/2.png" type="image/png">
     <link href="tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -12,6 +13,8 @@
     <!-- Logo and Search Bar Container -->
     <div class="w-full max-w-md text-center">
         <!-- Logo -->
+        <img src="https://dnayaka.github.io/2.png" alt="Logo Icon" class="h-12 w-12 mx-auto mb-4">
+    
         <h1 class="mb-8 text-4xl font-semibold text-gray-800">𝙉𝙖𝙭𝙮𝙯𝙯</h1>
 
         <!-- Search Bar -->
@@ -40,6 +43,12 @@
             </div>
             <span class="mt-2 text-sm">Web Store</span>
         </a>
+        <a href="dnayaka.github.io" target="_blank" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+            <div class="bg-gray-200 p-3 rounded-full">
+                <img src="https://dnayaka.github.io/2.png" alt="YouTube" class="h-8 w-8">
+            </div>
+            <span class="mt-2 text-sm">Naxyzz Web</span>
+        </a>
         <a href="https://www.youtube.com" target="_blank" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
             <div class="bg-gray-200 p-3 rounded-full">
                 <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube" class="h-8 w-8">
@@ -58,14 +67,20 @@
             </div>
             <span class="mt-2 text-sm">Whatsapp</span>
         </a>
+        <a href="chrome://history" target="_blank" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+            <div class="bg-gray-200 p-3 rounded-full">
+                <img src="https://static-00.iconduck.com/assets.00/history-icon-1024x931-u0os73bb.png" alt="YouTube" class="h-8 w-8">
+            </div>
+            <span class="mt-2 text-sm">History</span>
+        </a>
         <!-- Additional icons omitted for brevity -->
     </div>
 
     <!-- Toggle Buttons for Text, Image, and News Results -->
-    <div class="mt-4 flex space-x-4">
-        <button onclick="performSearch('text')" id="textResultBtn" class="bg-blue-500 text-white px-4 py-2 rounded">Text Results</button>
-        <button onclick="performSearch('image')" id="imageResultBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">Image Results</button>
-        <button onclick="performSearch('news')" id="newsResultBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">News Results</button>
+    <div class="mt-9 flex space-x-6">
+        <button onclick="performSearch('text')" id="textResultBtn" class="bg-blue-500 text-white px-4 py-2 rounded">Text </button>
+        <button onclick="performSearch('image')" id="imageResultBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">Image</button>
+        <button onclick="performSearch('news')" id="newsResultBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">News</button>
     </div>
 
     <!-- Search Results Section -->
