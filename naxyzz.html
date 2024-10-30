@@ -56,15 +56,16 @@
             <div class="bg-gray-200 p-3 rounded-full">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png" alt="YouTube" class="h-8 w-8">
             </div>
-            <span class="mt-2 text-sm">Chat GPT</span>
+            <span class="mt-2 text-sm">Whatsapp</span>
         </a>
         <!-- Additional icons omitted for brevity -->
     </div>
 
-    <!-- Toggle Buttons for Text and Image Results -->
+    <!-- Toggle Buttons for Text, Image, and News Results -->
     <div class="mt-4 flex space-x-4">
         <button onclick="performSearch('text')" id="textResultBtn" class="bg-blue-500 text-white px-4 py-2 rounded">Text Results</button>
         <button onclick="performSearch('image')" id="imageResultBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">Image Results</button>
+        <button onclick="performSearch('news')" id="newsResultBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">News Results</button>
     </div>
 
     <!-- Search Results Section -->
@@ -80,12 +81,14 @@
 
         async function performSearch(type) {
             const query = document.getElementById('searchInput').value;
-            const apiKey = 'AIzaSyALdfw4LpwkEfSAHNGmJYjYaHaXE8OAzcs'; // Ganti dengan API Key Anda
+            const apiKey = 'AIzaSyALdfw4LpwkEfSAHNGmJYjYaHaXE8OAzcs'; // Ganti dengan API Key Anda 
             const searchEngineId = '0747e2b2a7dca4137'; // Ganti dengan Search Engine ID Anda
-            
             let url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${query}`;
+            
             if (type === 'image') {
                 url += '&searchType=image';
+            } else if (type === 'news') {
+                url += '&sort=date'; // Optional: Menampilkan berita terbaru jika tersedia
             }
 
             try {
@@ -94,15 +97,14 @@
                 displayResults(data.items, type);
 
                 // Update button styles based on type
-                if (type === 'image') {
-                    document.getElementById('textResultBtn').classList.remove('bg-blue-500', 'text-white');
-                    document.getElementById('textResultBtn').classList.add('bg-gray-300', 'text-gray-700');
-                    document.getElementById('imageResultBtn').classList.add('bg-blue-500', 'text-white');
-                } else {
-                    document.getElementById('imageResultBtn').classList.remove('bg-blue-500', 'text-white');
-                    document.getElementById('imageResultBtn').classList.add('bg-gray-300', 'text-gray-700');
-                    document.getElementById('textResultBtn').classList.add('bg-blue-500', 'text-white');
-                }
+                document.getElementById('textResultBtn').classList.toggle('bg-blue-500', type === 'text');
+                document.getElementById('textResultBtn').classList.toggle('bg-gray-300', type !== 'text');
+                
+                document.getElementById('imageResultBtn').classList.toggle('bg-blue-500', type === 'image');
+                document.getElementById('imageResultBtn').classList.toggle('bg-gray-300', type !== 'image');
+                
+                document.getElementById('newsResultBtn').classList.toggle('bg-blue-500', type === 'news');
+                document.getElementById('newsResultBtn').classList.toggle('bg-gray-300', type !== 'news');
             } catch (error) {
                 console.error('Error fetching results:', error);
                 document.getElementById('results').innerHTML = '<p class="text-red-500">Error fetching results. Please try again.</p>';
@@ -141,5 +143,3 @@
     </script>
 </body>
 </html>
-
-            
