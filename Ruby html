@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝘽𝙧𝙤 𝙨𝙚𝙖𝙧𝙘𝙝</title>
-    <link rel="icon" href="https://ibb.co.com/0Z535JQ.png" type="image/png">
+    <title>Ruby Search</title>
+    <link rel="icon" href="https://i.ibb.co.com/zrVkznf/Desain-tanpa-judul-20241031-164603-0000.png" type="image/png">
     <link href="tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -13,9 +13,9 @@
     <!-- Logo and Search Bar Container -->
     <div class="w-full max-w-md text-center">
         <!-- Logo -->
-        <img src="https://i.ibb.co.com/ftJ7J0Q/20241031-062215-0000.png" alt="Logo Icon" class="h-12 w-12 mx-auto mb-4">
+        <img src="https://i.ibb.co.com/zrVkznf/Desain-tanpa-judul-20241031-164603-0000.png" alt="Logo Icon" class="h-12 w-12 mx-auto mb-4">
     
-        <h1 class="mb-8 text-4xl font-semibold text-gray-800">𝘽𝙧𝙤 𝙨𝙚𝙖𝙧𝙘𝙝</h1>
+        <h1 class="mb-8 text-4xl font-semibold text-gray-800">Ruby Search</h1>
 
         <!-- Search Bar -->
         <div class="w-full">
