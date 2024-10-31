@@ -8,6 +8,54 @@
     <link href="tailwind.min.css" rel="stylesheet">
 </head>
 
+<style>
+    .microphone-button {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: gray;
+            transition: color 0.3s;
+        }
+    .microphone-button:hover {
+       color: black;
+    }
+    .text-input {
+        width: 300px;
+        padding: 8px;
+    }
+    .button-35 {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-35:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+</style>
+
 <body class="bg-gray-100 h-screen flex flex-col items-center p-4">
     
     <!-- Logo and Search Bar Container -->
@@ -30,9 +78,17 @@
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
                 </button>
+                
             </div>
         </div>
+
+        
+       
+
+
     </div>
+
+    
 
     <!-- Shortcut Icons with Links -->
     <div class="mt-8 grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-6">
@@ -79,9 +135,10 @@
 
     <!-- Toggle Buttons for Text, Image, and News Results -->
     <div class="mt-9 flex space-x-6">
-        <button onclick="performSearch('text')" id="textResultBtn" class="bg-blue-500 text-white px-4 py-2 rounded">Text </button>
-        <button onclick="performSearch('image')" id="imageResultBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">Image</button>
-        <button onclick="performSearch('news')" id="newsResultBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">News</button>
+        <button class="button-35"  onclick="performSearch('text')" id="textResultBtn" class="bg-blue-500 text-white px-4 py-2 rounded">Text </button>
+        
+        <button class="button-35"  onclick="performSearch('image')" id="imageResultBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">Image</button>
+        <button class="button-35"  onclick="performSearch('news')" id="newsResultBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">News</button>
     </div>
 
     <!-- Search Results Section -->
@@ -89,6 +146,7 @@
 
     <!-- JavaScript -->
     <script>
+            
         function handleKeyPress(event) {
             if (event.key === "Enter") {
                 performSearch('text');
