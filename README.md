@@ -1,35 +1,22 @@
-# 𝙃𝙚𝙡𝙡𝙤, 𝙈𝙮 𝙣𝙖𝙢𝙚 𝘿𝙣𝙖𝙮𝙖𝙠𝙖
-![Hu Tao GIF](https://media.tenor.com/images/60a43af8f996a83fabd88bf435eb4876/tenor.gif)
-<img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="100">
-# Engginer
-![Google Chrome](https://img.shields.io/badge/Chrome-black?style=flat-square&logo=google-chrome)
-![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)
-![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git)
-![Google Chrome](https://img.shields.io/badge/Chrome-black?style=flat-square&logo=google-chrome)
-![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?style=flat-square&logo=visual-studio-code)
-![Android](https://img.shields.io/badge/Android-05150C?style=flat-square&logo=android)
-![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
-![Linux](https://img.shields.io/badge/Linux-black?style=flat-square&logo=linux)
+# JavaScript-based DDoS
+JavaScript-based DDoS is a type of DDoS attack where JavaScript is used to generate a large number of requests to a targeted website or server. These requests can be generated from various devices and browsers, making the attack harder to detect and defend against.
 
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg"
-  />
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg"
-  />
-  <img
-    alt="github contribution grid snake animation"
-    src="github-user-contribution.svg"
-  />
-</picture>
+![image.jpg](https://raw.githubusercontent.com/darkotodoric/javascript-based-ddos/13853f3/image.jpg)
 
+## Why it's dangerous?
+JavaScript-based DDoS is an exceptionally perilous threat, as malevolent actors can inject such scripts into already compromised websites, effectively utilizing their traffic as a potent weapon for executing devastating DDoS attacks. This presents a deeply alarming scenario since, unbeknownst to the proprietors of compromised sites, all visitors unwittingly contribute to the assault.
 
-## STATS
-![Dnayaka's github stats](https://github-readme-stats.vercel.app/api?username=Dnayaka&show_icons=true&theme=dracula)
+What makes this threat particularly insidious is that it renders traditional IP blocking methods nearly ineffective. Since the traffic originates from real users, it becomes exceedingly challenging to distinguish between legitimate visitors and malicious agents.
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dnayaka&layout=compact&count_private=true&theme=gruvbox" />
+Furthermore, when considering a website with **10,000** visitors in an hour, the potential impact becomes staggering. This influx of users could result in a mind-boggling **3,600,000,000** requests directed towards the site in just one hour. This highlights the fact that even with a relatively modest volume of visitors, this type of attack has the potential to devastate server infrastructures.
 
-![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=Dnayaka.Dnayaka)
+![example.png](https://raw.githubusercontent.com/darkotodoric/javascript-based-ddos/13853f3/example.png)
+
+## How to protect from this attack?
+In many cases, unfortunately, the only effective protection against "JavaScript-based DDoS" attacks may indeed be implementing CAPTCHA verification for all visitors during a specific time period. This measure means that all users will need to solve CAPTCHA challenges to prove that they are real humans and not automated bots.
+
+## Disclaimer
+This material and the information provided within this conversation are intended for educational purposes only. The author are not responsible for any misuse, unlawful activity, or damage that may result from the use of this information or tools for improper purposes.
+
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests to improve this project.
