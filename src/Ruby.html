@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Search</title>
+    <link rel="icon" href="https://i.ibb.co.com/zrVkznf/Desain-tanpa-judul-20241031-164603-0000.png" type="image/png">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<style>
+    /* CSS */
+    @font-face {
+        font-family: 'MyCustomFont';
+        src: url('icon/design.otf') format('truetype');
+        
+    }
+
+    body {
+        font-family: 'MyCustomFont', sans-serif;
+        letter-spacing: 3px;
+    }
+
+    .button-39 {
+    background-color: #FFFFFF;
+    border: 1px solid rgb(209,213,219);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    .button-39:hover {
+    background-color: rgb(249,250,251);
+    }
+
+    .button-39:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    }
+
+    .button-39:focus-visible {
+    box-shadow: none;
+    }
+    .microphone-button {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: gray;
+            transition: color 0.3s;
+        }
+    .microphone-button:hover {
+       color: black;
+    }
+    .text-input {
+        width: 300px;
+        padding: 8px;
+    }
+    .button-35 {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-35:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+</style>
+
+<body class="bg-gray-100 h-screen flex flex-col items-center p-4">
+    
+    <!-- Logo and Search Bar Container -->
+    <div class="w-full max-w-md text-center">
+        <!-- Logo -->
+        <img src="https://i.ibb.co.com/zrVkznf/Desain-tanpa-judul-20241031-164603-0000.png" alt="Logo Icon" class="h-12 w-12 mx-auto mb-4">
+    
+        <h1 class="mb-8 text-4xl font-semibold text-gray-800">Ruby Search</h1>
+
+        <!-- Search Bar -->
+        
+
+        
+        <div class="flex items-center max-w-lg mx-auto">   
+            <label for="voice-search" class="sr-only">Search</label>
+            <div class="relative w-full">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input  id="voice-search" type="text" onkeyup="handleKeyPress(event)" id="voice-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Make by Nata Dian"/>
+                <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7v3a5.006 5.006 0 0 1-5 5H6a5.006 5.006 0 0 1-5-5V7m7 9v3m-3 0h6M7 1h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3Z"/>
+                    </svg>
+                </button>
+            </div>
+            <button onclick="performSearch('text')" class="inline-flex items-center py-2.5 px-3 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>Search
+            </button>
+        </div>
+
+
+        
+       
+
+
+    </div>
+
+    
+
+    <!-- Shortcut Icons with Links -->
+    <div class="mt-8 grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-6">
+        <!-- Icons -->
+        <a href="https://google.com/" id="IconA" target="_blank" style="margin: 5px;" class=" flex flex-col items-center text-gray-600 hover:text-blue-600">
+            <div class="bg-gray-200 p-3 rounded-full">
+                <img id="LoadIconA" src="" alt="" class="h-8 w-8">
+            </div>
+        </a>
+
+        <a href="https://check-host.net/" id="IconB" target="_blank"style="margin: 5px;"  class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+            <div class="bg-gray-200 p-3 rounded-full">
+                <img id="LoadIconB" src="" alt="" class="h-8 w-8">
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com" id="IconC" target="_blank" style="margin: 5px;" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+            <div class="bg-gray-200 p-3 rounded-full">
+                <img id="LoadIconC" src="" alt="" class="h-8 w-8">
+            </div>
+        </a>
+
+        <a href="https://chatgpt.com" id="IconD" target="_blank" style="margin: 5px;" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+            <div class="bg-gray-200 p-3 rounded-full">
+                <img id="LoadIconD" src="" alt="" class="h-8 w-8">
+            </div>
+        </a>
+
+        <a href="https://web.whatsapp.com" id="IconE" target="_blank" style="margin: 5px;" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+            <div class="bg-gray-200 p-3 rounded-full">
+                <img id="LoadIconE" src="" alt="" class="h-8 w-8">
+            </div>
+
+        </a>
+
+        <a href="https://github.com/" id="IconF" target="_blank" style="margin: 5px;" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+            <div class="bg-gray-200 p-3 rounded-full">
+                <img id="LoadIconF" src="" alt="" class="h-8 w-8">
+            </div>
+            
+        </a>
+       
+        
+        
+        <!-- Additional icons omitted for brevity -->
+    </div>
+
+    <!-- Toggle Buttons for Text, Image, and News Results -->
+     <!-- HTML !-->
+
+
+    <div class="mt-9 flex space-x-6" style="letter-spacing: 2px;">
+        <button class="button-39" onclick="performSearch('text')" id="textResultBtn" class="bg-blue-500 text-white px-4 py-2 rounded">Web</button>
+        <button class="button-39" onclick="performSearch('image')" id="imageResultBtn" class="bg-gray-500 text-white px-4 py-2 rounded">Image</button>
+        <button class="button-39" onclick="performSearch('news')" id="newsResultBtn" class="bg-gray-500 text-white px-4 py-2 rounded">News</button>
+   </div>
+
+    <!-- Search Results Section -->
+    <div id="results" class="mt-10 w-full max-w-2xl space-y-6"></div>
+    <script src="script.js"></script>
+    <!-- JavaScript -->
+</body>
+</html>
